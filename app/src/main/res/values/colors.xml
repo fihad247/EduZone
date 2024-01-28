@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lighgrey">#989797</color>
+    <color name="underline">#D8D6D6</color>
+
+    <color name="custom_navigation_bar_color">#000000</color>
+
+    <color name="levender">#8692f7</color>
+    <color name="status_bar_color">@color/black</color>
+
+
+</resources>

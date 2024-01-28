@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_Home"
+    android:background="@color/white"
+    android:backgroundTint="@color/black">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Catagory"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="70dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:background="@drawable/shape_listview_short_question"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="50dp"
+
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="ইসলাম"
+                    android:layout_weight="80"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    />
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/arrow_next"
+                    android:layout_weight="20"
+                    android:padding="5dp"
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/short_question_islam"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:background="@drawable/shape_listview_short_question"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="মুমিন "
+                    android:layout_weight="80"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    />
+                <ImageView
+                    android:id="@+id/short_question_Mumin"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/arrow_next"
+                    android:layout_weight="20"
+                    android:padding="5dp"
+                    android:layout_marginRight="15dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:background="@drawable/shape_listview_short_question"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="সুন্নত "
+                    android:layout_weight="80"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    />
+                <ImageView
+                    android:id="@+id/short_question_Sunnah"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/arrow_next"
+                    android:layout_weight="20"
+                    android:padding="5dp"
+                    android:layout_marginRight="15dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:background="@drawable/shape_listview_short_question"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="কোরআন "
+                    android:layout_weight="80"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    />
+                <ImageView
+                    android:id="@+id/short_question_Koran"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/arrow_next"
+                    android:layout_weight="20"
+                    android:padding="5dp"
+                    android:layout_marginRight="15dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:background="@drawable/shape_listview_short_question"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="কাফের"
+                    android:layout_weight="80"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    />
+                <ImageView
+                    android:id="@+id/short_question_Kafer"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/arrow_next"
+                    android:layout_weight="20"
+                    android:padding="5dp"
+                    android:layout_marginRight="15dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:background="@drawable/shape_listview_short_question"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="হালাল "
+                    android:layout_weight="80"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    />
+                <ImageView
+                    android:id="@+id/short_question_Halal"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/arrow_next"
+                    android:layout_weight="20"
+                    android:padding="5dp"
+                    android:layout_marginRight="15dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:background="@drawable/shape_listview_short_question"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="হারাম  "
+                    android:layout_weight="80"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    />
+
+                <ImageView
+                    android:id="@+id/short_question_Haram"
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="20"
+                    android:padding="5dp"
+                    android:src="@drawable/arrow_next" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="100"
+                android:background="@drawable/shape_listview_short_question"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:layout_weight="80"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="60dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="20"
+                    android:padding="5dp"
+                    android:src="@drawable/arrow_next"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</FrameLayout>
