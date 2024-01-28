@@ -29,7 +29,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     app:navigationIcon="@drawable/baseline_menu_24"
-                    app:title="বিশ্ব নবীর শ্রেষ্ঠ বাণী"
+                    app:title="বিশ্ব নবীর শ্রেষ্ঠ বাণী 2.0"
                     app:titleTextColor="@color/white"
                     android:paddingTop="3dp"
                     />
