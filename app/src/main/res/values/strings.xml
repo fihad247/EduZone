@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">iEducation</string>
+    <string name="app_name">Higher Edu</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="api_url">http://www.fssoft.xyz</string>
+
+
 </resources>

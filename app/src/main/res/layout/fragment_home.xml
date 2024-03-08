@@ -4,285 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment_Home"
     android:background="@color/white"
-    android:backgroundTint="@color/black">
+    tools:context=".Fragment_Home">
 
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#FFC107"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="200dp"
+            android:background="#FFC107"
             android:orientation="vertical"
-            >
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitEnd"
+                android:src="@drawable/top_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:text="Catagory"
-                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Easy Learning"
+                android:textColor="#2789D6"
+                android:textSize="30sp"
                 android:textStyle="bold"
-                android:textSize="40sp"
-                android:textColor="@color/white"
-                android:layout_marginTop="70dp"
-                />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+            >
+
+
+            <GridView
+                android:id="@+id/gridView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="100"
-                android:background="@drawable/shape_listview_short_question"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="50dp"
-
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="ইসলাম"
-                    android:layout_weight="80"
-                    android:gravity="center_vertical"
-                    android:layout_marginLeft="15dp"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    />
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/arrow_next"
-                    android:layout_weight="20"
-                    android:padding="5dp"
-                    android:layout_marginRight="15dp"
-                    android:id="@+id/short_question_islam"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="100"
-                android:background="@drawable/shape_listview_short_question"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="15dp"
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="মুমিন "
-                    android:layout_weight="80"
-                    android:gravity="center_vertical"
-                    android:layout_marginLeft="15dp"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    />
-                <ImageView
-                    android:id="@+id/short_question_Mumin"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/arrow_next"
-                    android:layout_weight="20"
-                    android:padding="5dp"
-                    android:layout_marginRight="15dp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="100"
-                android:background="@drawable/shape_listview_short_question"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="15dp"
-
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="সুন্নত "
-                    android:layout_weight="80"
-                    android:gravity="center_vertical"
-                    android:layout_marginLeft="15dp"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    />
-                <ImageView
-                    android:id="@+id/short_question_Sunnah"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/arrow_next"
-                    android:layout_weight="20"
-                    android:padding="5dp"
-                    android:layout_marginRight="15dp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="100"
-                android:background="@drawable/shape_listview_short_question"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="15dp"
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="কোরআন "
-                    android:layout_weight="80"
-                    android:gravity="center_vertical"
-                    android:layout_marginLeft="15dp"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    />
-                <ImageView
-                    android:id="@+id/short_question_Koran"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/arrow_next"
-                    android:layout_weight="20"
-                    android:padding="5dp"
-                    android:layout_marginRight="15dp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="100"
-                android:background="@drawable/shape_listview_short_question"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="15dp"
-
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="কাফের"
-                    android:layout_weight="80"
-                    android:gravity="center_vertical"
-                    android:layout_marginLeft="15dp"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    />
-                <ImageView
-                    android:id="@+id/short_question_Kafer"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/arrow_next"
-                    android:layout_weight="20"
-                    android:padding="5dp"
-                    android:layout_marginRight="15dp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="100"
-                android:background="@drawable/shape_listview_short_question"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="15dp"
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="হালাল "
-                    android:layout_weight="80"
-                    android:gravity="center_vertical"
-                    android:layout_marginLeft="15dp"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    />
-                <ImageView
-                    android:id="@+id/short_question_Halal"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/arrow_next"
-                    android:layout_weight="20"
-                    android:padding="5dp"
-                    android:layout_marginRight="15dp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="100"
-                android:background="@drawable/shape_listview_short_question"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="15dp"
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="হারাম  "
-                    android:layout_weight="80"
-                    android:gravity="center_vertical"
-                    android:layout_marginLeft="15dp"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    />
-
-                <ImageView
-                    android:id="@+id/short_question_Haram"
-                    android:layout_width="50dp"
-                    android:layout_height="60dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_weight="20"
-                    android:padding="5dp"
-                    android:src="@drawable/arrow_next" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="100"
-                android:background="@drawable/shape_listview_short_question"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="15dp"
-                >
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text=""
-                    android:layout_weight="80"
-                    android:gravity="center_vertical"
-                    android:layout_marginLeft="15dp"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    />
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="60dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_weight="20"
-                    android:padding="5dp"
-                    android:src="@drawable/arrow_next"
-                    android:visibility="invisible"/>
-            </LinearLayout>
+                android:layout_height="wrap_content" />
 
 
+        </ScrollView>
 
 
-
-        </LinearLayout>
-
-    </ScrollView>
-
-
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </FrameLayout>

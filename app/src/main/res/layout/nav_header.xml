@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#047A6C">
+    android:background="#07011B">
 
    <ImageView
      android:layout_width="match_parent"
@@ -13,34 +13,18 @@
      android:id="@+id/profilepic"
      />
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="ইসলাম সম্পর্কে সাধারণ জ্ঞান"
-        android:textColor="@color/white"
-        android:textSize="16dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profilepic" />
-
-
 
     <TextView
         android:id="@+id/following"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
-        android:layout_marginBottom="556dp"
         android:text="V 1.0.0"
         android:textColor="#03A9F4"
         android:textSize="12dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/profilepic" />
 
     <View
         style="@style/line"

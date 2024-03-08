@@ -4,12 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#07011B"
     tools:context=".Splash_Screen">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/logo" />
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Higher Edu"
+        android:textColor="#F80000"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
 
 </RelativeLayout>

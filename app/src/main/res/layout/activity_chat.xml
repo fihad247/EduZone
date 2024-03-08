@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Chat">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/top_info"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#1C1B1B"
+            android:weightSum="100">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_CircleImageView_Recever_image"
+                app:civ_border_color="#ff000000"
+                app:civ_border_width="2dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_launcher"
+                android:layout_margin="10dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_marginHorizontal="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/tv_Recever_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:text="Md Nahid Hasan"
+                    android:textColor="@color/white"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_last_active"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Active"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" now "
+                        android:textColor="@color/white"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/historylistView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/relativeLayout"
+        android:layout_below="@+id/top_info"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="13dp"
+        android:listSelector="@android:color/transparent"
+        tools:ignore="MissingConstraints" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_post"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="4dp">
+
+        <EditText
+            android:id="@+id/ed_message_box"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="75dp"
+            android:background="@drawable/shape_message_type_box"
+            android:hint="Type Something..."
+            android:inputType="textCapSentences"
+            android:paddingHorizontal="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <ImageView
+            android:id="@+id/img_message_send_button"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:src="@drawable/baseline_send_white" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

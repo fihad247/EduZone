@@ -6,22 +6,22 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/nav_message"
+            android:id="@+id/nav_data_backup"
             android:icon="@drawable/baseline_message_24"
-            android:title="তথ্য ব্যাকআপ" />
+            android:title="Search" />
 
         <item
-            android:id="@+id/nav_sync"
+            android:id="@+id/nav_profile"
             android:icon="@drawable/baseline_sync_24"
             android:title="প্রোফাইল " />
 
         <item
-            android:id="@+id/nav_trush"
+            android:id="@+id/nav_privacy_policy"
             android:icon="@drawable/baseline_delete_24"
             android:title="প্রাইভেসি পলিসি" />
 
         <item
-            android:id="@+id/nav_settings"
+            android:id="@+id/nav_logout"
             android:icon="@drawable/baseline_settings_24"
             android:title="লগ আউট " />
     </group>
@@ -29,7 +29,7 @@
         <item android:title="এপস সম্পর্কে">
             <menu>
                 <item
-                    android:id="@+id/nav_login"
+                    android:id="@+id/nav_app_version"
                     android:icon="@drawable/baseline_person_24"
                     android:title="এপস ভার্সন  ১.০.০" />
             </menu>

@@ -29,7 +29,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     app:navigationIcon="@drawable/baseline_menu_24"
-                    app:title="বিশ্ব নবীর শ্রেষ্ঠ বাণী"
+                    app:title="All Time"
                     app:titleTextColor="@color/white"
                     android:paddingTop="3dp"
                     />
@@ -77,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:contentDescription="TODO"
-                android:src="@drawable/quran"
+                android:src="@drawable/ic_message"
                 app:layout_anchor="@id/bottomAppBar"
                 app:maxImageSize="40dp"
                 app:tint="@null" />

@@ -8,7 +8,7 @@
 
     <item
         android:id="@+id/notification"
-        android:title="Notification"
+        android:title="Notice"
         android:icon="@drawable/ic_notification"
         />
 
@@ -17,13 +17,13 @@
         android:title="  "/>
 
     <item
-        android:id="@+id/leaderbord"
-        android:title="Leaderbord"
-        android:icon="@drawable/ic_leaderboard"/>
+        android:id="@+id/post"
+        android:title="Post"
+        android:icon="@drawable/baseline_post_add_24"/>
 
     <item
-        android:id="@+id/tashbih"
-        android:title="Tashbih"
-        android:icon="@drawable/ic_doinik_hishab"/>
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/baseline_person"/>
 
 </menu>
