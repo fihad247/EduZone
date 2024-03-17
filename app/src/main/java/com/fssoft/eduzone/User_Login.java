@@ -91,6 +91,7 @@ public class User_Login extends AppCompatActivity {
                             // Perform necessary actions when username is not found
                             edphone_signIn.setVisibility(View.GONE);
                             edpassword_signIn.setVisibility(View.VISIBLE);
+                            edpassword_signIn.requestFocus();
                             btn_signIn3.setVisibility(View.VISIBLE);
                             btn_signIn.setVisibility(View.GONE);
 

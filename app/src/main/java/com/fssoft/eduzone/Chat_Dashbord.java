@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -41,19 +43,36 @@ public class Chat_Dashbord extends AppCompatActivity {
     SharedPreferences.Editor editor;
     EditText ed_message_box;
     ProgressBar progressBar;
+    LinearLayout search_Student_layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_dashbord);
 
+        //-------- set StatusBar Color  --------
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+            window.setStatusBarColor(getResources().getColor(R.color.status_bar_color));
+        }
+
+
         my_list_View = findViewById(R.id.listView_chat_dashbord);
-
-
         progressBar = findViewById(R.id.progressBar_post);
+        search_Student_layout = findViewById(R.id.search_Student_layout);
 
         sharedPreferences = getSharedPreferences(getString(R.string.app_name) , MODE_PRIVATE);
         editor = sharedPreferences.edit();
+
+        search_Student_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Chat_Dashbord.this, Search_Student.class);
+                startActivity(intent);
+
+            }
+        });
 
         //-----load Message---------------
        // loadMessage();
