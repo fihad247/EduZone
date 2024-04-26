@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#047A6C">
+    android:background="#047A6C"
+    tools:context=".MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,37 +14,34 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            >
+            android:layout_height="?attr/actionBarSize">
+
             <com.google.android.material.appbar.AppBarLayout
                 android:id="@+id/appbarLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/black"
-                >
+                android:background="@color/black">
 
                 <com.google.android.material.appbar.MaterialToolbar
                     android:id="@+id/topAppBar"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
-                    app:navigationIcon="@drawable/baseline_menu_24"
-                    app:title="All Time"
-                    app:titleTextColor="@color/white"
+                    android:fontFamily="@font/bangla_mainak_buniyadi"
                     android:paddingTop="3dp"
-                    />
+                    app:navigationIcon="@drawable/baseline_menu_24"
+                    app:title="পড়রে"
+                    app:titleTextColor="@color/white" />
 
             </com.google.android.material.appbar.AppBarLayout>
 
         </RelativeLayout>
 
 
-
-
-       <FrameLayout
-                android:id="@+id/frameLayout"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-           android:layout_marginTop="?attr/actionBarSize"/>
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize" />
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
@@ -83,10 +79,6 @@
                 app:tint="@null" />
 
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-
-
 
 
     </RelativeLayout>

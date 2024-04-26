@@ -13,10 +13,17 @@ import android.widget.Adapter;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Fragment_Home extends Fragment {
 
-
+    HashMap<String, String> hashMap = new HashMap<>();
+    ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -26,8 +33,11 @@ public class Fragment_Home extends Fragment {
 
         GridView gridView = myView.findViewById(R.id.gridView);
 
-      //  MyAdepter myAdepter =new MyAdepter();
-      //  gridView.setAdapter(myAdepter);
+        creatTable();
+
+        MyAdapter myAdapter = new MyAdapter();
+        gridView.setAdapter(myAdapter);
+
 
         /*
         short_question_islam.setOnClickListener(new View.OnClickListener() {
@@ -45,32 +55,66 @@ public class Fragment_Home extends Fragment {
 
     }//------------
 
-    private class MyAdepter extends BaseAdapter {
+    public class MyAdapter extends BaseAdapter {
 
         @Override
         public int getCount() {
-            return 5;
+            return arrayList.size();
         }
 
         @Override
-        public Object getItem(int i) {
+        public Object getItem(int position) {
             return null;
         }
 
         @Override
-        public long getItemId(int i) {
+        public long getItemId(int position) {
             return 0;
         }
 
         @Override
-        public View getView(int i, View view, ViewGroup viewGroup) {
-           LayoutInflater layoutInflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-           View myView2 = layoutInflater.inflate(R.id.gridView_item, viewGroup, false);
+        public View getView(int position, View convertView, ViewGroup parent) {
 
-            return myView2;
+            LayoutInflater layoutInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            View myView = layoutInflater.inflate(R.layout.item_home, parent, false);
+
+            ImageView img_home = myView.findViewById(R.id.img_home);
+            TextView text_home = myView.findViewById(R.id.text_home);
+
+            HashMap<String, String> hashMap = arrayList.get(position);
+            String image = hashMap.get("img");
+            String text = hashMap.get("title");
+
+            img_home.setImageResource(Integer.parseInt(image));
+            text_home.setText(text);
+
+            return myView;
         }
     }
 
+    private void creatTable() {
+
+        hashMap = new HashMap<>();
+        hashMap.put("img", String.valueOf(R.drawable.icon_result));
+        hashMap.put("title", "রুটিন");
+        arrayList.add(hashMap);
+
+        hashMap = new HashMap<>();
+        hashMap.put("img", String.valueOf(R.drawable.icon_result));
+        hashMap.put("title", "সাজেশন");
+        arrayList.add(hashMap);
+
+        hashMap = new HashMap<>();
+        hashMap.put("img", String.valueOf(R.drawable.icon_result));
+        hashMap.put("title", "বইয়ের তালিকা");
+        arrayList.add(hashMap);
+        hashMap = new HashMap<>();
+        hashMap.put("img", String.valueOf(R.drawable.icon_result));
+        hashMap.put("title", "শিক্ষার ধাপ");
+        arrayList.add(hashMap);
+
+
+    }
 
 
 }//-----------

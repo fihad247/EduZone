@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
     <color name="lighgrey">#989797</color>
     <color name="underline">#D8D6D6</color>
 
@@ -10,5 +9,17 @@
     <color name="levender">#8692f7</color>
     <color name="status_bar_color">@color/black</color>
 
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="blue">#0000FF</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="orange">#FFA500</color>
+    <color name="purple">#800080</color>
+    <color name="pink">#FFC0CB</color>
+    <color name="brown">#A52A2A</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="deepyellow">#FFC107</color>
 
 </resources>

@@ -2,77 +2,77 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black"
     tools:context=".Fragment_Profile">
 
-
-    <RelativeLayout
-        android:id="@+id/layout_profile_view"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="visible">
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/layout_profile_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white"
-            android:orientation="vertical">
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="240dp"
-                android:background="@drawable/shape_profile_iomage_background"
-                android:orientation="vertical">
-                <!-- this code for xml layout -->
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/img_user_profile_image"
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:layout_centerVertical="true"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="30dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/dummy_profile_image"
-                    app:civ_border_color="#ff000000"
-                    app:civ_border_width="4dp" />
-
-                <TextView
-                    android:id="@+id/tv_user_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="9dp"
-                    android:gravity="center"
-                    android:text="name"
-                    android:textColor="@color/white"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+            android:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
+                android:background="@color/white"
                 android:orientation="vertical">
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="left"
-                    android:text="Account Info"
-                    android:textColor="@color/black"
-                    android:textSize="25sp"
-                    android:textStyle="bold" />
+                    android:layout_height="240dp"
+                    android:background="@drawable/shape_profile_iomage_background"
+                    android:orientation="vertical">
+                    <!-- this code for xml layout -->
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_user_profile_image"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/dummy_profile_image"
+                        app:civ_border_color="#ff000000"
+                        app:civ_border_width="4dp" />
 
-                <ScrollView
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:gravity="center"
+                        android:text="name"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="left"
+                        android:text="Account Info"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginBottom="75dp"
                         android:orientation="vertical">
 
                         <LinearLayout
@@ -375,30 +375,29 @@
 
                     </LinearLayout>
 
-                </ScrollView>
+                </LinearLayout>
+
 
             </LinearLayout>
 
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/profile_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="00dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#FFC107"
+                android:contentDescription="TODO"
+                android:src="@drawable/baseline_edit_24"
+                app:maxImageSize="25dp"
+                app:tint="@null" />
 
-        </LinearLayout>
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/profile_edit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="00dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:backgroundTint="#FFC107"
-            android:contentDescription="TODO"
-            android:src="@drawable/baseline_edit_24"
-            app:maxImageSize="25dp"
-            app:tint="@null" />
-
-    </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
 
     <LinearLayout
         android:id="@+id/layout_profile_edit"
@@ -426,7 +425,7 @@
                     android:layout_marginTop="30dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/dummy_profile_image"
-                    app:civ_border_color="#ff000000"
+                    app:civ_border_color="#F60606"
                     app:civ_border_width="4dp" />
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -587,8 +586,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="75dp"
+                    android:orientation="horizontal"
                     android:weightSum="2">
 
                     <Button
@@ -603,12 +603,13 @@
                         android:text="Update"
                         android:textColor="@color/black"
                         android:textSize="17dp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <Button
                         android:id="@+id/btn_profile_cansel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
                         android:layout_marginLeft="9dp"
                         android:layout_marginRight="30dp"
                         android:layout_weight="1"
@@ -617,8 +618,7 @@
                         android:text="Cancel"
                         android:textColor="@color/black"
                         android:textSize="17dp"
-                        android:textStyle="bold"
-                        android:layout_gravity="center_horizontal"/>
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -629,5 +629,6 @@
 
 
     </LinearLayout>
+
 
 </FrameLayout>

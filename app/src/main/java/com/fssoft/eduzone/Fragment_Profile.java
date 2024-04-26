@@ -112,7 +112,6 @@ public class Fragment_Profile extends Fragment {
         String GeT_name = sharedPreferences.getString("name", " ");
         String GeT_userphone = sharedPreferences.getString("userphone", " ");
         String GeT_email = sharedPreferences.getString("email", " ");
-        String GeT_user_Pass = sharedPreferences.getString("userpass", "0");
         String GeT_age = sharedPreferences.getString("age", " ");
         String GeT_gender = sharedPreferences.getString("gender", " ");
         String GeT_address = sharedPreferences.getString("address", " ");
@@ -127,6 +126,15 @@ public class Fragment_Profile extends Fragment {
         tv_user_gender.setText(GeT_gender);
         tv_user_address.setText(GeT_address);
         tv_user_education.setText(GeT_education);
+
+        String GeT_img_user_profile_image = sharedPreferences.getString("profile_image_url", " ");
+
+        // Load image from Hosting File
+        Picasso.get()
+                .load("http://fssoft.xyz/rgc/image/" + GeT_img_user_profile_image) // Replace with your API endpoint
+                .placeholder(R.drawable.dummy_profile_image) // Optional placeholder
+                .error(R.drawable.baseline_person) // Optional error image
+                .into(img_user_profile_image);
 
         //----  Load Profile data
         load_Profile_data();

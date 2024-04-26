@@ -9,9 +9,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -82,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         bottomNavigationView.setBackground(null);
         replaceFragment(new Fragment_Home());
 
@@ -117,8 +121,9 @@ public class MainActivity extends AppCompatActivity {
 
                 if (id == R.id.nav_data_backup) {
                     // Toast.makeText(MainActivity.this, "Data backup is Clicked", Toast.LENGTH_SHORT).show();
-                       Intent intent = new Intent(MainActivity.this, Web_Browser.class);
-                       startActivity(intent);
+                    //   Intent intent = new Intent(MainActivity.this, Web_Browser.class);
+                    //   startActivity(intent);
+                    replaceFragment(new Fragment_Message());
                 } else if (id == R.id.nav_profile) {
                     replaceFragment(new Fragment_Profile());
                    // Toast.makeText(MainActivity.this, "Synch is Clicked", Toast.LENGTH_SHORT).show();
@@ -203,7 +208,10 @@ public class MainActivity extends AppCompatActivity {
                 + user_phone + "&pas=" +user_pass ;
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        //   progressBar.setVisibility(View.VISIBLE);
+
+        //-------No internet Connection--------------
+        checkInternetConnection();
+
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, p_url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -250,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 //Log.d("ServerRes", error.toString());
-                Toast.makeText(MainActivity.this, "VolleyError", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Network No Respons", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -286,5 +294,18 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    //-------No internet Connection--------------
+    public void checkInternetConnection() {
+
+
+        ConnectivityManager connectivityManager = (ConnectivityManager) MainActivity.this.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        if (networkInfo == null || !networkInfo.isConnected()) {
+            Toast.makeText(MainActivity.this, "No internet connection", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
 
 }  //----last bracket ends -------------------
