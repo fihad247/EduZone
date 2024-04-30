@@ -20,6 +20,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Home_Book_list"
+            android:exported="false" />
+        <activity
             android:name=".Home_Rutin"
             android:exported="false" />
         <activity

@@ -78,6 +78,7 @@ public class Fragment_Home extends Fragment {
             LayoutInflater layoutInflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View myView = layoutInflater.inflate(R.layout.item_home, parent, false);
 
+            LinearLayout layItem = myView.findViewById(R.id.layItem);
             ImageView img_home = myView.findViewById(R.id.img_home);
             TextView text_home = myView.findViewById(R.id.text_home);
 
@@ -87,6 +88,32 @@ public class Fragment_Home extends Fragment {
 
             img_home.setImageResource(Integer.parseInt(image));
             text_home.setText(text);
+
+            layItem.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    String text_click =  text_home.getText().toString();
+
+                    if (text_click.equals("রুটিন")) {
+                        Intent myIntent = new Intent(getActivity(),Home_Rutin.class);
+                        startActivity(myIntent);
+                    } else if (text_click.equals("সাজেশন")) {
+                        Intent myIntent = new Intent(getActivity(),Home_Book_list.class);
+                        startActivity(myIntent);
+                    } else if (text_click.equals("বইয়ের তালিকা")) {
+                        Intent myIntent = new Intent(getActivity(),Home_Rutin.class);
+                        startActivity(myIntent);
+                    } else if (text_click.equals("শিক্ষার ধাপ")) {
+                        Intent myIntent = new Intent(getActivity(),Home_Rutin.class);
+                        startActivity(myIntent);
+                    }
+
+
+                }
+            });
+
+
 
             return myView;
         }
